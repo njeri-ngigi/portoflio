@@ -13,7 +13,19 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      fontFamily: {},
+      fontFamily: {
+        jura: ["Jura"],
+        jetbrains: ["Jetbrains Mono"],
+      },
+      keyframes: {
+        width: {
+          "0%": { width: "0%", paddingLeft: "0px" },
+          "100%": { width: "100%" },
+        },
+      },
+      animation: {
+        "width-grow": "width 2s ease-in-out",
+      },
     },
     colors: {
       cream: "#F3EFE4",
