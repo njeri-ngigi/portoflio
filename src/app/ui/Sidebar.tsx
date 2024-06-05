@@ -4,7 +4,8 @@ export function Sidebar() {
   return (
     <div className="flex flex-col items-center h-full p-5 ml-4">
       <div className="flex flex-col h-2/5 justify-evenly">
-        <ThemeIcon />
+        {/* TODO: Set Dark theme and turn onn ThemeIcon */}
+        {/* <ThemeIcon /> */}
         <LinkedIn />
         <GitHub />
         <Twitter />

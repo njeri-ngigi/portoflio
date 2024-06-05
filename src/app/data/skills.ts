@@ -13,11 +13,11 @@ export type SkillSet = {
 export const skills: SkillSet[] = [
   {
     skill: Skill.Frontend,
-    skillSet: ["React", "Redux", "TypeScript", "Tailwind CSS"],
+    skillSet: ["React", "Redux", "TypeScript", "CSS", "Tailwind", "Bootstrap"],
   },
   {
     skill: Skill.Backend,
-    skillSet: ["Node.js", "Express", "MongoDB", "PostgreSQL"],
+    skillSet: ["Golang", "Node.js", "Express", "MongoDB", "PostgreSQL"],
   },
   {
     skill: Skill.DevOps,
@@ -26,11 +26,10 @@ export const skills: SkillSet[] = [
 ];
 
 // TODO:
-// - font
 // - responsive design
-// - download resume
 // - send mail functionality
 // - add wave svg to contact form
+// - download resume
+// - accessibility
 // - add tooltips
-// - animations
 // - dark mode

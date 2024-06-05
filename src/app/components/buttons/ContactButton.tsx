@@ -6,7 +6,7 @@ export function ContactButton(props: ContactButtonProps) {
   return (
     <div className="text-4xl">
       <button
-        className="absolute border-2 border-black p-4 bg-cream bottom-2.5"
+        className="absolute border-2 border-black p-4 bg-cream bottom-2.5 hover:bg-white transition-all duration-300 active:bottom-0 active:ml-2.5"
         onClick={props.onClick}
       >
         CONTACT ME

@@ -11,7 +11,11 @@ type IconProps = {
 
 function Icon({ link, children }: IconProps) {
   return (
-    <a href={link} target="_blank" className="cursor-pointer">
+    <a
+      href={link}
+      target="_blank"
+      className="cursor-pointer transition-all duration-150 hover:translate-y-0.5"
+    >
       {children}
     </a>
   );
