@@ -20,6 +20,18 @@ export default function Home() {
   );
 }
 
+// =========================== //
+// TODO:
+// - responsive design
+// - send mail functionality
+// - add wave svg to contact form
+// - download resume
+// - accessibility
+// - add tooltips
+// - dark mode
+
+// =========================== //
+
 // TODO: plan around responsiveness
 // Remain the same until 1250px
 // 1250-1150px:

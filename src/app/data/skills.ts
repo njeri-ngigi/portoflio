@@ -24,12 +24,3 @@ export const skills: SkillSet[] = [
     skillSet: ["Docker", "Kubernetes", "Jenkins", "AWS"],
   },
 ];
-
-// TODO:
-// - responsive design
-// - send mail functionality
-// - add wave svg to contact form
-// - download resume
-// - accessibility
-// - add tooltips
-// - dark mode
