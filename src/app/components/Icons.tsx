@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { FaGithubAlt, FaLinkedin, FaMoon } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
 import { links } from "../data/links";
+import { RiDownload2Fill } from "react-icons/ri";
 
 type IconProps = {
   link: string;
@@ -33,12 +33,6 @@ export const GitHub = () => (
   </Icon>
 );
 
-export const Twitter = () => (
-  <Icon link={links.Twitter}>
-    <FaSquareXTwitter size={25} title="Go to my Twitter page" />
-  </Icon>
-);
-
 export const ThemeIcon = () => {
   const handleClick = () => {
     console.log("Toggle theme");
@@ -47,6 +41,21 @@ export const ThemeIcon = () => {
   return (
     <button onClick={handleClick}>
       <FaMoon size={25} title="Turn on dark mode" />
+    </button>
+  );
+};
+
+export const DownloadResumeIcon = () => {
+  const handleClick = () => {
+    console.log("Download resume");
+  };
+
+  return (
+    <button
+      onClick={handleClick}
+      className="cursor-pointer transition-all duration-150 hover:translate-y-0.5"
+    >
+      <RiDownload2Fill size={25} title="Download my resume" />
     </button>
   );
 };
