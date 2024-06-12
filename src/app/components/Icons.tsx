@@ -23,13 +23,27 @@ function Icon({ link, children }: IconProps) {
 
 export const LinkedIn = () => (
   <Icon link={links.LinkedIn}>
-    <FaLinkedin size={25} title="Go to my LinkedIn profile" />
+    <FaLinkedin
+      className="xs:hidden"
+      size={25}
+      title="Go to my LinkedIn profile"
+    />
+    <FaLinkedin
+      className="hidden xs:block"
+      size={20}
+      title="Go to my LinkedIn profile"
+    />
   </Icon>
 );
 
 export const GitHub = () => (
   <Icon link={links.GitHub}>
-    <FaGithubAlt size={25} title="Go to my Github page" />
+    <FaGithubAlt className="xs:hidden" size={25} title="Go to my Github page" />
+    <FaGithubAlt
+      className="hidden xs:block"
+      size={20}
+      title="Go to my Github page"
+    />
   </Icon>
 );
 
@@ -46,16 +60,24 @@ export const ThemeIcon = () => {
 };
 
 export const DownloadResumeIcon = () => {
-  const handleClick = () => {
-    console.log("Download resume");
-  };
-
   return (
-    <button
-      onClick={handleClick}
+    <a
       className="cursor-pointer transition-all duration-150 hover:translate-y-0.5"
+      href="shalons-resume.pdf"
+      rel="noopener noreferrer"
+      target="_blank"
+      download
     >
-      <RiDownload2Fill size={25} title="Download my resume" />
-    </button>
+      <RiDownload2Fill
+        className="xs:hidden"
+        size={25}
+        title="Download my resume"
+      />
+      <RiDownload2Fill
+        className="hidden xs:block"
+        size={20}
+        title="Download my resume"
+      />
+    </a>
   );
 };
