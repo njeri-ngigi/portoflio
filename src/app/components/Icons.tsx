@@ -1,5 +1,4 @@
-import { ReactNode } from "react";
-import { FaGithubAlt, FaLinkedin, FaMoon } from "react-icons/fa";
+import { FaGithubAlt, FaLinkedin } from "react-icons/fa";
 import { links } from "../data/links";
 import { RiDownload2Fill } from "react-icons/ri";
 
@@ -24,8 +23,13 @@ function Icon({ link, children }: IconProps) {
 export const LinkedIn = () => (
   <Icon link={links.LinkedIn}>
     <FaLinkedin
-      className="xs:hidden"
-      size={25}
+      className="hidden xxxl:block"
+      size={40}
+      title="Go to my LinkedIn profile"
+    />
+    <FaLinkedin
+      className="xs:hidden xxxl:hidden"
+      size={30}
       title="Go to my LinkedIn profile"
     />
     <FaLinkedin
@@ -38,7 +42,16 @@ export const LinkedIn = () => (
 
 export const GitHub = () => (
   <Icon link={links.GitHub}>
-    <FaGithubAlt className="xs:hidden" size={25} title="Go to my Github page" />
+    <FaGithubAlt
+      className="hidden xxxl:block"
+      size={40}
+      title="Go to my Github page"
+    />
+    <FaGithubAlt
+      className="xs:hidden xxxl:hidden"
+      size={30}
+      title="Go to my Github page"
+    />
     <FaGithubAlt
       className="hidden xs:block"
       size={20}
@@ -46,18 +59,6 @@ export const GitHub = () => (
     />
   </Icon>
 );
-
-export const ThemeIcon = () => {
-  const handleClick = () => {
-    console.log("Toggle theme");
-  };
-
-  return (
-    <button onClick={handleClick}>
-      <FaMoon size={25} title="Turn on dark mode" />
-    </button>
-  );
-};
 
 export const DownloadResumeIcon = () => {
   return (
@@ -67,10 +68,16 @@ export const DownloadResumeIcon = () => {
       rel="noopener noreferrer"
       target="_blank"
       download
+      title="Download my resume"
     >
       <RiDownload2Fill
-        className="xs:hidden"
-        size={25}
+        className="hidden xxxl:block"
+        size={40}
+        title="Download my resume"
+      />
+      <RiDownload2Fill
+        className="xs:hidden xxxl:hidden"
+        size={30}
         title="Download my resume"
       />
       <RiDownload2Fill

@@ -3,6 +3,8 @@ export enum Skill {
   Frontend = "FRONTEND",
   Backend = "BACKEND",
   DevOps = "DEVOPS",
+  Cloud = "CLOUD",
+  Testing = "TESTING",
 }
 
 export type SkillSet = {
@@ -17,10 +19,18 @@ export const skills: SkillSet[] = [
   },
   {
     skill: Skill.Backend,
-    skillSet: ["Golang", "Node.js", "Express", "MongoDB", "PostgreSQL"],
+    skillSet: ["Golang", "Node.js", "Express", "PostgreSQL", "MongoDB"],
+  },
+  {
+    skill: Skill.Testing,
+    skillSet: ["Jest", "TestCafe", "Cypress", "Playwright"],
   },
   {
     skill: Skill.DevOps,
-    skillSet: ["Docker", "Kubernetes", "Jenkins", "AWS"],
+    skillSet: ["Git", "Docker", "Kubernetes"],
+  },
+  {
+    skill: Skill.Cloud,
+    skillSet: ["GCP Tracing, Monitors and Logs"],
   },
 ];

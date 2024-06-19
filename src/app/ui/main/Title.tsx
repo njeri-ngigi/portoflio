@@ -4,46 +4,45 @@ import { BsDot } from "react-icons/bs";
 // NOTE: &apos; is the HTML entity for an apostrophe (used below)
 // NOTE: &gt; is the HTML entity for an > (used below)
 
-function SubTitle() {
+type TitleProps = {
+  openSkillsModal: () => void;
+};
+
+function SubTitle(props: TitleProps) {
   return (
-    <div className="ml-8 font-jetbrains w-[43em] xl:w-[34em] m:w-[26em] s:w-[22em] xs:w-[18em] s:ml-0">
-      <div className="bg-cream border-x-2 py-4 xs:py-2 pl-10 xl:pl-6 text-6xl xl:text-5xl m:text-4xl s:text-3xl xs:text-2xl overflow-hidden text-nowrap animate-width-grow">
+    <div className="ml-8 m:ml-0 font-jetbrains xxxl:w-[50em] w-[43em] xl:w-[34em] ml:w-[26em] s:w-[22em] xs:w-[18em] s:ml-0">
+      <div className="bg-night text-cream py-4 xs:py-2 pl-10 xl:pl-6 xxxl:text-7xl text-6xl xl:text-5xl ml:text-4xl s:text-3xl xs:text-2xl overflow-hidden text-nowrap">
         Software Engineer
       </div>
-      <div className="flex justify-center items-center w-2/3 s:w-full text-3xl xl:text-2xl m:text-xl s:text-lg  px-1 bg-lemon">
+      <div className="flex justify-center items-center w-2/3 s:w-full xxxl:text-4xl text-3xl xl:text-2xl m:text-xl s:text-lg px-1 bg-lemon text-night">
         <span>FULL STACK</span>
         <BsDot />
         <span>WEB</span>
       </div>
-      <div className="group">
-        <div className="absolute cursor-pointer text-xl xl:text-base w-0 group-hover:w-44 xs:group-hover:w-32 group-hover:border-b-2 group-hover:bg-black/10 group-active:bg-white overflow-hidden text-nowrap transition-color duration-300">
-          What I do --&gt;
-        </div>
-        <div className="cursor-pointer text-xl xl:text-base w-1/3 s:w-1/2">
-          What I do --&gt;
-        </div>
+      <div
+        className="hidden m:block cursor-pointer text-xl hover:bg-black/10 active:bg-white w-1/2 xs:w-full s:text-lg"
+        onClick={props.openSkillsModal}
+      >
+        What I do --&gt;
       </div>
     </div>
   );
 }
 
-export function Title() {
+export function Title(props: TitleProps) {
   return (
-    <div className="mt-20 s:mt-24 xs:mt-20">
-      <div className="text-5xl mb-16 xl:text-4xl m:text-3xl xs:text-2xl s:ml-4 xs:ml-2">
+    <div className="my-20 flex flex-col justify-center ml:items-start xxl:ml-32 lg:ml-0">
+      <div className="xxxl:text-7xl text-5xl mb-16 xl:text-4xl s:text-3xl xs:text-2xl">
         <span> Hi, I&apos;m </span>
-        <a target="_blank" href={links.LinkedIn} className="group ml-2">
-          <span className="absolute border-b pl-5 xl:pl-4 m:pl-1 xs:pl-2 xxs:w-48">
-            Shalon N. Ngigi
-          </span>
-          <span className="absolute overflow-hidden w-0 group-hover:w-96 xl:group-hover:w-72 m:group-hover:w-56 xs:group-hover:w-48 animate-pulse hover:animate-none pl-5 xl:pl-4 m:pl-1 xs:pl-2 transition-all duration-300 text-nowrap border-b bg-lemon">
-            Shalon N. Ngigi
-          </span>
+        <a
+          target="_blank"
+          href={links.LinkedIn}
+          className="ml-2 border-b hover:bg-lemon hover:text-night cursor-pointer transition-colors duration-300"
+        >
+          Shalon N. Ngigi
         </a>
       </div>
-      <SubTitle />
+      <SubTitle {...props} />
     </div>
   );
 }
-
-// TODO: add on click to show skills in modal

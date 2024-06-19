@@ -15,16 +15,17 @@ export function Modal(props: InnerModalProps) {
   }
 
   return (
-    <div className="fixed h-full w-full flex items-center justify-center">
+    <div className="fixed h-full w-full flex items-center justify-center z-20">
       <div
-        className="fixed bg-black opacity-70 h-full w-full flex items-center justify-center"
+        className="absolute bg-black opacity-70 h-full w-full flex items-center justify-center"
         onClick={props.onClose}
       ></div>
-      <div className="fixed text-4xl bg-white p-8 pl-10 h-[70vh] w-3/5">
+      <div className="absolute text-4xl bg-white py-6 px-12 m:px-8 xs:px-6 w-3/5 xl:w-4/5 s:w-11/12 s:m-4">
         <div className="w-full flex justify-between">
-          <div>.....</div>
+          <div className="">.....</div>
           <button onClick={props.onClose}>
-            <IoCloseSharp size={30} />
+            <IoCloseSharp className="s:hidden" size={30} />
+            <IoCloseSharp className="hidden s:block" size={25} />
           </button>
         </div>
         {props.children}

@@ -1,2 +1,2 @@
 export { Main } from "./main/Main";
-export { Skills } from "./skills";
+export { Navigation } from "./Navigation";
