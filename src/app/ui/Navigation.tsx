@@ -1,6 +1,17 @@
+import { useState } from "react";
 import { MainProps } from "./types";
+import { FaSpinner } from "react-icons/fa";
 
 export function Navigation(props: MainProps) {
+  const [downloadDisabled, setDownloadDisabled] = useState(false);
+
+  const handleDownload = () => {
+    setDownloadDisabled(true);
+    setTimeout(() => {
+      setDownloadDisabled(false);
+    }, 500);
+  };
+
   return (
     <div
       role="navigation"
@@ -19,15 +30,22 @@ export function Navigation(props: MainProps) {
       >
         My skills
       </button>
-      <a
-        className="cursor-pointer active:bg-cream active:text-night hover:bg-white border-r px-[12px] py-[8px] font-extrabold"
-        href="shalons-resume.pdf"
-        rel="noopener noreferrer"
-        target="_blank"
-        download
-      >
-        Download My Resume
-      </a>
+      <div className="border-r flex items-center justify-center flex-col w-[12.5em]">
+        {downloadDisabled ? (
+          <FaSpinner size={30} className="animate-spin" />
+        ) : (
+          <a
+            onClick={handleDownload}
+            className="cursor-pointer active:bg-cream active:text-night hover:bg-white font-extrabold px-[12px] py-[8px] w-[12.5em]"
+            href="shalons-resume.pdf"
+            rel="noopener noreferrer"
+            target="_blank"
+            download
+          >
+            Download My Resume
+          </a>
+        )}
+      </div>
     </div>
   );
 }
