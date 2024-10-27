@@ -36,7 +36,7 @@ export function Bio() {
             loading="lazy"
           />
         </div>
-        <p className="bg-purple1/10 text-orange1 font-jetbrains text-xs s:text-[10px] px-2 py-1 mt-4 text-center">
+        <p className="bg-purple1/10 dark:bg-purple1 dark:text-white font-jetbrains text-xs s:text-[10px] px-2 py-1 mt-4 text-center">
           Status: building, learning, reading & writing
         </p>
       </div>
