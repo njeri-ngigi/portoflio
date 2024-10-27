@@ -1,7 +1,7 @@
 import { ContactButton } from "../../components";
 import { Title } from "./Title";
 import { Actions } from "./Actions";
-import { MainProps } from "../types";
+import { MainProps } from "./types";
 
 export function Main(props: MainProps) {
   return (

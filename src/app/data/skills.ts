@@ -31,6 +31,6 @@ export const skills: SkillSet[] = [
   },
   {
     skill: Skill.Cloud,
-    skillSet: ["GCP Tracing, Monitors and Logs"],
+    skillSet: ["GCP", "AWS", "Azure"],
   },
 ];
