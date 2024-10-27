@@ -40,7 +40,7 @@ const projects = [
 
 export function Projects() {
   return (
-    <div className="font-jetbrains">
+    <div className="font-jetbrains lg:w-11/12">
       <h2 className="text-black1 text-2xl font-light dark:text-gray1">PROJECTS</h2>
       <div className="flex flex-wrap mt-4">
         {projects.map((project) => (

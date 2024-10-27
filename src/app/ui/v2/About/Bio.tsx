@@ -1,4 +1,5 @@
 import { links } from "@/app/data/links";
+import classNames from "classnames";
 import Image from "next/image";
 import { AnchorHTMLAttributes } from "react";
 import { IconType } from "react-icons";
@@ -40,7 +41,7 @@ export function Bio() {
           Status: building, learning, reading & writing
         </p>
       </div>
-      <div className="text-orange2 dark:text-orange1 flex justify-center flex-wrap font-jetbrains font-light mt-8 s:text-xs">
+      <div className="text-orange2 dark:text-orange1 flex m:flex-col m:items-center justify-center flex-wrap font-jetbrains font-light mt-8 s:text-xs">
         <Link
           href={`mailto:${links.Email}?subject=RE: Shalon's Portfolio&body=Hi Shalon, `}
           text="Say Hello"
@@ -55,6 +56,18 @@ export function Bio() {
           Icon={RiDownload2Fill}
           title="Download my resume"
         />
+        <Link
+          href={links.GitHub}
+          text="GitHub"
+          Icon={FaLinkedin}
+          className="hidden m:flex"
+        />
+        <Link
+          href={links.Hashnode}
+          text="Hashnode"
+          Icon={FaLinkedin}
+          className="hidden m:flex"
+        />
       </div>
     </div>
   );
@@ -65,11 +78,14 @@ interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   Icon: IconType;
 }
 
-function Link({ href, text, Icon, ...otherProps }: LinkProps) {
+function Link({ href, text, Icon, className, ...otherProps }: LinkProps) {
   return (
     <a
       href={href}
-      className="flex items-center mb-2 mx-4 s:mx-2 hover:text-purple1 dark:hover:text-gray1 hover:underline hover:cursor-pointer transition-all duration-200"
+      className={classNames(
+        "flex items-center m:mb-4 mb-2 mx-4 s:mx-2 hover:text-purple1 dark:hover:text-gray1 hover:underline hover:cursor-pointer transition-all duration-200",
+        className
+      )}
       target="_blank"
       {...otherProps}
     >

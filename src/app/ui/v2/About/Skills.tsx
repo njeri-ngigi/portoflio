@@ -117,7 +117,7 @@ const icons = [
 
 export function Skills() {
   return (
-    <div className="font-jetbrains mt-16 lg:mt-8 ml-16 m:ml-8 s:ml-4 xs:ml-2">
+    <div className="m:hidden font-jetbrains mt-16 lg:mt-8 ml-16 m:ml-8 s:ml-4 xs:ml-2">
       <h2 className="text-black1 text-2xl font-light dark:text-gray1">SKILLS</h2>
       <div className="flex text-black2 text-sm mt-4 flex-wrap">
         {icons.map(({ name, Icon }, index) => (
