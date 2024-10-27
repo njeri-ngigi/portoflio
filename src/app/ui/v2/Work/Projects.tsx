@@ -54,7 +54,7 @@ export function Projects() {
         ))}
       </div>
       <a
-        className="text-lg text-orange1 hover:text-purple1 hover:dark:text-gray1 hover:underline transition-all duration-200"
+        className="text-lg text-orange2 dark:text-orange1 hover:text-purple1 hover:dark:text-gray1 hover:underline transition-all duration-200"
         href={links.GitHub}
         target="_blank"
       >
