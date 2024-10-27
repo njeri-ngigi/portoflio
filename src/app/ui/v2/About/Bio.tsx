@@ -41,7 +41,7 @@ export function Bio() {
           Status: building, learning, reading & writing
         </p>
       </div>
-      <div className="text-orange2 dark:text-orange1 flex m:flex-col m:items-center justify-center flex-wrap font-jetbrains font-light mt-8 s:text-xs">
+      <div className="text-orange2 dark:text-orange1 flex m:flex-col m:items-center justify-center flex-wrap font-jetbrains font-light mt-8">
         <Link
           href={`mailto:${links.Email}?subject=RE: Shalon's Portfolio&body=Hi Shalon, `}
           text="Say Hello"
