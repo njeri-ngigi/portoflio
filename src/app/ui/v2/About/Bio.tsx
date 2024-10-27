@@ -3,9 +3,10 @@ import classNames from "classnames";
 import Image from "next/image";
 import { AnchorHTMLAttributes } from "react";
 import { IconType } from "react-icons";
-import { FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdArrowOutward, MdOutlineEmail } from "react-icons/md";
 import { RiDownload2Fill } from "react-icons/ri";
+import { SiHashnode } from "react-icons/si";
 
 export function Bio() {
   return (
@@ -59,13 +60,13 @@ export function Bio() {
         <Link
           href={links.GitHub}
           text="GitHub"
-          Icon={FaLinkedin}
+          Icon={FaGithub}
           className="hidden m:flex"
         />
         <Link
           href={links.Hashnode}
           text="Hashnode"
-          Icon={FaLinkedin}
+          Icon={SiHashnode}
           className="hidden m:flex"
         />
       </div>
@@ -90,7 +91,7 @@ function Link({ href, text, Icon, className, ...otherProps }: LinkProps) {
       {...otherProps}
     >
       <Icon className="mr-2" /> {text}{" "}
-      <MdArrowOutward size={10} className="ml-0.5" />
+      <MdArrowOutward size={10} className="ml-0.5 m:hidden" />
     </a>
   );
 }
