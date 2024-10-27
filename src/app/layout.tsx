@@ -27,7 +27,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="dark:bg-black4">
+      <body className="dark:bg-black4" role="main">
         {children}
         <Analytics />
       </body>
