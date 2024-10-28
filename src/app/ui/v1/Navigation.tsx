@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MainProps } from "./types";
 import { FaSpinner } from "react-icons/fa";
+import { links } from "@/app/data/links";
 
 export function Navigation(props: MainProps) {
   const [downloadDisabled, setDownloadDisabled] = useState(false);
@@ -37,7 +38,7 @@ export function Navigation(props: MainProps) {
           <a
             onClick={handleDownload}
             className="cursor-pointer active:bg-cream active:text-night hover:bg-white font-extrabold px-[12px] py-[8px] w-[12.5em]"
-            href="shalons-resume.pdf"
+            href={links.Resume}
             rel="noopener noreferrer"
             target="_blank"
             download

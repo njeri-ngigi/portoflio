@@ -64,7 +64,7 @@ export const DownloadResumeIcon = () => {
   return (
     <a
       className="cursor-pointer transition-all duration-150 hover:translate-y-0.5"
-      href="shalons-resume.pdf"
+      href={links.Resume}
       rel="noopener noreferrer"
       target="_blank"
       download
