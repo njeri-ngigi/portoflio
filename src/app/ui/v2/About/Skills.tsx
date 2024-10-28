@@ -29,10 +29,10 @@ const icons = [
     name: "React",
     Icon: FaReact,
   },
-  {
-    name: "Redux",
-    Icon: FaReact,
-  },
+  // {
+  //   name: "Redux",
+  //   Icon: FaReact,
+  // },
   {
     name: "TypeScript",
     Icon: TbBrandTypescript,
@@ -45,25 +45,25 @@ const icons = [
     name: "Tailwind",
     Icon: RiTailwindCssFill,
   },
-  {
-    name: "Bootstrap",
-    Icon: FaBootstrap,
-  },
-  {
-    name: "Golang",
-    Icon: FaGolang,
-  },
+  // {
+  //   name: "Bootstrap",
+  //   Icon: FaBootstrap,
+  // },
   {
     name: "Node.js",
     Icon: FaNodeJs,
   },
-  {
-    name: "Express",
-    Icon: SiExpress,
-  },
+  // {
+  //   name: "Express",
+  //   Icon: SiExpress,
+  // },
   {
     name: "NestJS",
     Icon: SiNestjs,
+  },
+  {
+    name: "Golang",
+    Icon: FaGolang,
   },
   {
     name: "PostgreSQL",
@@ -77,18 +77,18 @@ const icons = [
     name: "Jest",
     Icon: SiJest,
   },
-  {
-    name: "TestCafe",
-    Icon: SiTestcafe,
-  },
-  {
-    name: "Cypress",
-    Icon: SiCypress,
-  },
-  {
-    name: "Playwright",
-    Icon: SiPlaywright,
-  },
+  // {
+  //   name: "TestCafe",
+  //   Icon: SiTestcafe,
+  // },
+  // {
+  //   name: "Cypress",
+  //   Icon: SiCypress,
+  // },
+  // {
+  //   name: "Playwright",
+  //   Icon: SiPlaywright,
+  // },
   {
     name: "Git",
     Icon: FaGitAlt,

@@ -56,6 +56,7 @@ export function Bio() {
           text="My resume"
           Icon={RiDownload2Fill}
           title="Download my resume"
+          hideLink
         />
         <Link
           href={links.GitHub}
@@ -77,9 +78,17 @@ export function Bio() {
 interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   text: string;
   Icon: IconType;
+  hideLink?: boolean;
 }
 
-function Link({ href, text, Icon, className, ...otherProps }: LinkProps) {
+function Link({
+  href,
+  text,
+  Icon,
+  className,
+  hideLink,
+  ...otherProps
+}: LinkProps) {
   return (
     <a
       href={href}
@@ -91,7 +100,10 @@ function Link({ href, text, Icon, className, ...otherProps }: LinkProps) {
       {...otherProps}
     >
       <Icon className="mr-2" /> {text}{" "}
-      <MdArrowOutward size={10} className="ml-0.5 m:hidden" />
+      <MdArrowOutward
+        size={10}
+        className={classNames("ml-0.5 m:hidden", hideLink && "hidden")}
+      />
     </a>
   );
 }
