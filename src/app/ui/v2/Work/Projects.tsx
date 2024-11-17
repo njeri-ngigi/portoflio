@@ -45,7 +45,7 @@ export function Projects() {
       <div className="flex flex-wrap mt-4">
         {projects.map((project) => (
           <a key={project.index} href={project.link} target="_blank">
-            <div className="w-[160px] xs:w-[320px] xs2:w-[290px] mx-auto h-[170px] xs:h-[120px] bg-purple1/10 dark:bg-black2 hover:bg-gray1 hover:dark:bg-orange1/70 transition-all duration-200 mr-3 mb-3 px-3 py-2 flex flex-col justify-between">
+            <div className="w-[160px] xs:w-[320px] xs2:w-[290px] mx-auto h-[165px] xs:h-[120px] bg-purple1/10 dark:bg-black2 hover:bg-gray1 hover:dark:bg-orange1/70 transition-all duration-200 mr-3 mb-3 px-3 py-2 flex flex-col justify-between">
               <h3 className="text-base text-black1 dark:text-gray2">{project.title}</h3>
               <p className="text-black2 text-xs my-2 dark:text-gray1">{project.description}</p>
               <p className="text-black2 text-[10px] my-2 dark:text-gray1">{project.stack}</p>

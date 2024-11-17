@@ -39,7 +39,7 @@ export function Bio() {
           />
         </div>
         <p className="bg-purple1/10 dark:bg-purple1 dark:text-white font-jetbrains text-xs s:text-[10px] px-2 py-1 mt-4 text-center">
-          Status: building, learning, reading & writing
+          Status: building cool stuff
         </p>
       </div>
       <div className="text-orange2 dark:text-orange1 flex m:flex-col m:items-center justify-center flex-wrap font-jetbrains font-light mt-8">
