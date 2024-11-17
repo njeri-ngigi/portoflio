@@ -3,10 +3,17 @@ import { links } from "@/app/data/links";
 const projects = [
   {
     index: "project-1",
-    title: "Sauti Pol",
-    description: "A platform for elections, polls and surveys.",
-    link: "https://github.com/njeri-ngigi/sauti-pol",
-    stack: "TypeScript, NestJS, Node.js, React, PostgreSQL",
+    title: "Poline",
+    description: "A backend server for Karma, a polling platform.",
+    link: "https://github.com/njeri-ngigi/sauti-pol/tree/main/poline",
+    stack: "TypeScript, NestJS, Node.js, PostgreSQL",
+  },
+  {
+    index: "project-1",
+    title: "Karma",
+    description: "A frontend client for Poline, a platform for polling",
+    link: "https://github.com/njeri-ngigi/sauti-pol/tree/main/karma",
+    stack: "React, TypeScript, Next.js",
   },
   {
     index: "project-2",
@@ -19,7 +26,7 @@ const projects = [
     index: "project-3",
     title: "Real time chat backend",
     description: "Real time chat backend server",
-    link: "https://github.com/njeri-ngigi/real-time-chat-react",
+    link: "https://github.com/njeri-ngigi/real-time-chat",
     stack: "JavaScript, Node.js, Socket.io, MongoDB",
   },
   {
