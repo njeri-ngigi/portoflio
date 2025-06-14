@@ -3,7 +3,7 @@ import { Projects } from "./Projects";
 
 export function Work() {
   return (
-    <div className="m:hidden w-5/12 lg:w-full ml-16 m:ml-8 s:ml-4 xs:ml-2 lg:mt-8 min-w-[320px]">
+    <div className="w-5/12 lg:w-full flex flex-col lg:items-center min-w-[320px] my-3 lg:mt-8 xs:mt-6 max-w-[800px] ml-16 lg:ml-0 overflow-auto">
       <Projects />
       <Blog />
     </div>

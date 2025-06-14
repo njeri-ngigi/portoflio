@@ -12,14 +12,14 @@ export function Bio() {
   return (
     <div>
       <div className="flex items-center flex-col text-black1 mt-8 dark:text-gray1">
-        <h1 className="self-start ml-16 m:ml-8 s:ml-4 font-orbitron text-2xl s:text-xl xs:text-lg mb-4">
+        <h1 className="font-orbitron text-2xl s:text-xl xs:text-lg mb-4">
           <code>&#8212;</code>
           <code>&#8212;</code>
           <code>&#8212;</code>
-          <span className="pl-4">Hello,</span>
+          <span className="ml-1">Hello,</span>
         </h1>
         <h1 className="font-orbitron">
-          <span className="pl-4 text-3xl s:text-2xl xs:text-xl">
+          <span className="text-3xl s:text-2xl xs:text-xl">
             I&apos;m Shalon N. Ngigi
           </span>
         </h1>
@@ -42,7 +42,7 @@ export function Bio() {
           Status: building cool stuff
         </p>
       </div>
-      <div className="text-orange2 dark:text-orange1 flex m:flex-col m:items-center justify-center flex-wrap font-jetbrains font-light mt-8">
+      <div className="text-orange2 dark:text-orange1 flex justify-center xs:items-center flex-wrap font-jetbrains font-light mt-8 xs:mt-6 xs:flex-col xs:text-sm">
         <Link
           href={`mailto:${links.Email}?subject=RE: Shalon's Portfolio&body=Hi Shalon, `}
           text="Say Hello"
@@ -57,18 +57,6 @@ export function Bio() {
           Icon={RiDownload2Fill}
           title="Download my resume"
           hideLink
-        />
-        <Link
-          href={links.GitHub}
-          text="GitHub"
-          Icon={FaGithub}
-          className="hidden m:flex"
-        />
-        <Link
-          href={links.Hashnode}
-          text="Hashnode"
-          Icon={SiHashnode}
-          className="hidden m:flex"
         />
       </div>
     </div>
@@ -92,17 +80,14 @@ function Link({
   return (
     <a
       href={href}
-      className={classNames(
-        "flex items-center m:mb-4 mb-2 mx-4 s:mx-2 hover:text-purple1 dark:hover:text-gray1 hover:underline hover:cursor-pointer transition-all duration-200",
-        className
-      )}
+      className="flex items-center m:mb-3 mb-2 mx-4 s:mx-2 xs:mx-0 hover:text-purple1 dark:hover:text-gray1 hover:underline hover:cursor-pointer transition-all duration-200"
       target="_blank"
       {...otherProps}
     >
       <Icon className="mr-2" /> {text}{" "}
       <MdArrowOutward
         size={10}
-        className={classNames("ml-0.5 m:hidden", hideLink && "hidden")}
+        className={classNames("ml-0.5 xs:hidden", hideLink && "hidden")}
       />
     </a>
   );

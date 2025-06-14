@@ -29,10 +29,14 @@ const icons = [
     name: "React",
     Icon: FaReact,
   },
-  // {
-  //   name: "Redux",
-  //   Icon: FaReact,
-  // },
+  {
+    name: "React Native",
+    Icon: FaReact,
+  },
+  {
+    name: "Next.js",
+    Icon: FaReact,
+  },
   {
     name: "TypeScript",
     Icon: TbBrandTypescript,
@@ -117,13 +121,15 @@ const icons = [
 
 export function Skills() {
   return (
-    <div className="m:hidden font-jetbrains mt-16 lg:mt-8 ml-16 m:ml-8 s:ml-4 xs:ml-2">
-      <h2 className="text-black1 text-2xl font-light dark:text-gray1">SKILLS</h2>
-      <div className="flex text-black2 text-sm mt-4 flex-wrap">
+    <div className="font-jetbrains mt-6 lg:mt-8 m:mt-4 ml-16 lg:ml-0 lg:px-2 flex flex-col lg:items-center max-w-[800px]">
+      <h2 className="text-black1 text-2xl xs:text-xl font-light dark:text-gray1">
+        SKILLS
+      </h2>
+      <div className="flex text-black2 text-sm xs:text-xs mt-4 flex-wrap lg:justify-center">
         {icons.map(({ name, Icon }, index) => (
           <p
             key={index}
-            className={`border border-black2 text-black2 dark:text-gray1 rounded-full px-2 flex items-center py-0.5 mr-4 mb-4`}
+            className={`border border-black2 text-black2 dark:text-gray1 rounded-full px-2 flex items-center py-0.5 mr-2 mb-4`}
           >
             <span className="ml-1">{name}</span>
             <Icon className="ml-1" />
