@@ -30,9 +30,9 @@ export function Blog() {
       <div className="max-w-md s:max-w-sm">
         {blogs.map((blog) => (
           <a key={blog.index} href={blog.link} target="_blank">
-            <div className="bg-yellow2/25 hover:bg-gray1 dark:bg-gray1 hover:dark:bg-yellow2 transition-all duration-200 px-4 py-2 my-3 xs:w-[320px] xs2:w-[290px]">
-              <h3>{blog.title}</h3>
-              <p className="text-black4 text-xs my-1 truncate">
+            <div className="bg-yellow2/25 hover:bg-gray1 dark:bg-black2 hover:dark:bg-orange1/70 transition-all duration-200 px-4 py-2 my-3 xs:w-[320px] xs2:w-[290px]">
+              <h3 className="dark:text-gray2">{blog.title}</h3>
+              <p className="text-black4 text-xs my-1 truncate dark:text-gray1">
                 {blog.description}
               </p>
             </div>
